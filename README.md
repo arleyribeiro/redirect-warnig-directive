@@ -1,27 +1,13 @@
-# Navigate
+# Context
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.29.
+One of the projects I am working on is to manage medical records of employees of the company Vale. We use the Framework Angular on the web application.
 
-## Development server
+The project grows with new features and many improvements to the UX of the users. One of the features to increase the UX is to inform a user about changes in the forms when he clicks on the button to come back to the initial page a dialog is open to inform the changes.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# What is the problem?
 
-## Code scaffolding
+The problem is that we have many modules with many buttons to redirect the user, _**so a piece of code repeats every time in many components**_ and the complexity of the refactoring increases.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Simple Solution
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+One solution for this problem was to use a **directive with this behavior**. When the user clicks on the button and the page has a form whith changes then open a dialog to inform the user. Yes, the principle **DRY (Don’t Repeat Yourself)** is applied perfectly and this solutions is so simple and another principle is applied **KISS (Keep it simple, stupid)**.

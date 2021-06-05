@@ -1,0 +1,28 @@
+.container-register {
+  display: grid;
+  .register-form {
+    display: grid;
+    padding: 32px;
+    justify-content: center;
+    grid-template-rows:
+      "header"
+      "body"
+      "actions";
+    .header {
+      display: flex;
+      column-gap: 16px;
+      align-items: center;
+    }
+    .body {
+      mat-form-field {
+        padding: 10px 0px 10px 0px;
+      }
+    }
+
+    .actions {
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
